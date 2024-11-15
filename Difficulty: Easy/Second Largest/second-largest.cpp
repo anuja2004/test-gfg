@@ -10,20 +10,21 @@ class Solution {
   public:
     // Function returns the second
     // largest elements
-    int print2largest(vector<int> &arr) {
+    int getSecondLargest(vector<int> &arr) {
         // Code Here
-       std::set<int> distinctElements(arr.begin(), arr.end());
+          // Code Here
+       set<int> distinctElements(arr.begin(), arr.end());
 
-    // If the set has fewer than 2 elements, return -1
-    if (distinctElements.size() < 2) {
-        return -1;
-    }
-
-    // Get the second largest element by iterating backwards through the set
-    auto it = distinctElements.rbegin();
-    ++it;  // Move to the second largest element
-
-    return *it; 
+        // If the set has fewer than 2 elements, return -1
+        if (distinctElements.size() < 2) {
+            return -1;
+        }
+    
+        // Get the second largest element by iterating backwards through the set
+        auto it = distinctElements.rbegin();
+        ++it;  // Move to the second largest element
+    
+        return *it; 
     }
 };
 
@@ -43,8 +44,9 @@ int main() {
             arr.push_back(number);
         }
         Solution ob;
-        int ans = ob.print2largest(arr);
+        int ans = ob.getSecondLargest(arr);
         cout << ans << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
