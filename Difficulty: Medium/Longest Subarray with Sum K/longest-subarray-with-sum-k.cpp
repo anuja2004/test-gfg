@@ -42,6 +42,26 @@ class Solution {
             }
         }
         return maxi;
+        
+        //2-pointer approch
+        // int left=0,right=0;
+        // int maxi=0;
+        // int sum=0;
+        // while(right<n){
+        //     while(left<=right && sum>k){
+        //         sum-=arr[left];
+        //         left++;
+        //     }
+        //     if(sum==k){
+        //         maxi=max(maxi,(right-left+1));
+        //     }
+        //     right++;
+        //     if(right<n){
+                
+        //         sum+=arr[right];
+        //     }
+        // }
+        // return maxi;
     }
 };
 
